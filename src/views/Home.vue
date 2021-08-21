@@ -8,14 +8,12 @@
 
 <script>
 // @ is an alias to /src
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 import HelloEddie from '@/components/HelloEddie.vue'
 
 export default {
 
   name: 'Home',
   components: {
-    LanguageSwitcher,
     HelloEddie
   }
 }
