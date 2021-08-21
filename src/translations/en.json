@@ -1,5 +1,6 @@
 {
     "hello": "Hello",
     "name": "Eddie",
-    "flag": ":australia:"
+    "flag": "🇦🇺",
+    "flag-md": ":flag_australia:"
 }

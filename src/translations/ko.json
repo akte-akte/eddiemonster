@@ -1,5 +1,6 @@
 {
     "hello": "안녕하세요",
     "name": "에디",
-    "flag": ":south_korea:"
+    "flag": "🇰🇷",
+    "flag-md": ":flag_south_korea:"
 }
