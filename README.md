@@ -1,6 +1,6 @@
 # eddiemonster
 
-This project is for the entertainment of a 4 year old human being
+This project is for the entertainment of a 4 year old human being :tada:
 
 ## Project setup
 

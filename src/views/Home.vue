@@ -1,18 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/eddie-star.svg">
-    <HelloWorld msg="Hello Eddie"/>
+    <LanguageSwitcher/>
+    <HelloEddie msg="Hello Eddie"/>
+    <img alt="great green star" src="../assets/eddie-star.svg">
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import HelloEddie from '@/components/HelloEddie.vue'
 
 export default {
+
   name: 'Home',
   components: {
-    HelloWorld
+    LanguageSwitcher,
+    HelloEddie
   }
 }
 </script>
