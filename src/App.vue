@@ -4,16 +4,20 @@
     <router-link to="/about">About</router-link>
   </div>
   <language-switcher/>
+  <p>locale is: {{ locale }}, state.lang is {{ lang }} </p>
   <router-view/>
   
 </template>
 
 <script>
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { mapState } from 'vuex'
 
 export default {
   components: { LanguageSwitcher },
-  name: 'App'
+  computed: {
+    ...mapState(['locale', 'lang'])
+  }
 } 
 </script>
 
