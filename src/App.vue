@@ -4,7 +4,6 @@
     <router-link to="/about">About</router-link>
   </div>
   <language-switcher/>
-  <p>locale is: {{ locale }}, state.lang is {{ lang }} </p>
   <router-view/>
   
 </template>
