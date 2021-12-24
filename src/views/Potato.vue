@@ -2,14 +2,28 @@
   <div class="potato">
     <div class="blockquote-wrapper">
     <blockquote>
-    <h2>Musings of a potato</h2>
-      <p>I want to be chips when I grow up</p>
+    <h2>{{ t('musings', {}, {locale: lang}) }}</h2>
+      <p>{{ t('want-to-be', {}, {locale: lang}) }}</p>
       </blockquote>
     </div>
     <img src="../assets/potato-with-blue-eyes.png" class="post-image" />
   </div>
 </template>
 
+<script>
+import { useI18n } from 'vue-i18n'
+import { mapState } from 'vuex'
+
+export default {
+  setup() {
+    const {t, locale} = useI18n();
+    return {t, locale};
+  },
+   computed: {
+    ...mapState(['locale', 'lang'])
+  }
+}
+</script>
 
 <style>
 .post-image{
@@ -53,6 +67,18 @@ blockquote:after {
     line-height: 0;
     bottom: -43px;
     right: 30px;
+}
+
+/* Blockquote right double quotes */
+blockquote:before {
+    position: absolute;
+    content: "“";
+    color: orangered;
+    font-size: 10rem;
+    line-height: 0;
+    top: 36px;
+    left: 30px;
+    opacity: 30%;
 }
 
 /* increase header size after 600px */
