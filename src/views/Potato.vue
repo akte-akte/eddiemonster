@@ -69,7 +69,7 @@ blockquote:after {
     right: 30px;
 }
 
-/* Blockquote right double quotes */
+/* Blockquote left double quotes */
 blockquote:before {
     position: absolute;
     content: "“";
@@ -78,7 +78,7 @@ blockquote:before {
     line-height: 0;
     top: 36px;
     left: 30px;
-    opacity: 30%;
+    opacity: 50%;
 }
 
 /* increase header size after 600px */
