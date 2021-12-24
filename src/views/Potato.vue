@@ -78,7 +78,7 @@ blockquote:before {
     line-height: 0;
     top: 36px;
     left: 30px;
-    opacity: 50%;
+    opacity: 0.5;
 }
 
 /* increase header size after 600px */
