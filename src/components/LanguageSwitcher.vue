@@ -4,10 +4,6 @@
       <option value="en">English</option>
       <option value="ko">Korean</option>
     </select>
-  <!-- this is  clumsy -->
-  <h1> 
-    <span>{{ t('hello', {}, {locale: lang}) }} </span> <span> {{ t('name', {}, {locale: lang}) }}</span> <span> {{ t('flag', {}, {locale: lang}) }}</span> 
-  </h1>
 </div>  
 </template>
 

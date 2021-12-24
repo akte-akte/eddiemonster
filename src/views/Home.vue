@@ -1,4 +1,8 @@
 <template>
+      <!-- this is  clumsy -->
+  <h1> 
+    <span>{{ t('hello', {}, {locale: lang}) }} </span> <span> {{ t('name', {}, {locale: lang}) }}</span> <span> {{ t('flag', {}, {locale: lang}) }}</span> 
+  </h1>
   <div class="home">
     <svg viewBox="-20 0 557 190" id="svg">
       <circle cx="100" cy="100" r="3" />
@@ -19,6 +23,8 @@
 </template>
 
 <script>
+import { useI18n } from 'vue-i18n'
+import { mapState } from 'vuex'
   import gsap from 'gsap'
   import {
     MotionPathPlugin
@@ -28,6 +34,13 @@
 
   export default {
     name: 'Home',
+    setup() {
+    const {t, locale} = useI18n();
+    return {t, locale};
+  },
+   computed: {
+    ...mapState(['locale', 'lang'])
+   },
     mounted() {
       gsap.to("#star", {
         duration: 5,
@@ -57,15 +70,15 @@
   svg {
     overflow: visible;
     margin-top: 3rem;
-    width: 60%;
-    height: 40%;
+    width: 100%;
+    height: 80%;
 
     /* Fix Safari rendering bug */
     transform: translateZ(0);
   }
 
   g {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 </style>
